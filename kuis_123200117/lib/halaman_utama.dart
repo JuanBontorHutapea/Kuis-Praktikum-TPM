@@ -24,7 +24,7 @@ class HalamanUtama extends StatelessWidget {
           return InkWell(
             onTap: (){
               Navigator.push(context,
-              MaterialPageRoute(builder: (context) => detailDisease(disease: disease,),)
+              MaterialPageRoute(builder: (context) => DetailPage(disease: disease,),)
               );
             },
             child: SingleChildScrollView(

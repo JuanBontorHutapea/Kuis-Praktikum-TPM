@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:kuis_123200117/disease_data.dart';
 
-class detailDisease extends StatelessWidget {
+class DetailPage extends StatelessWidget {
   final Diseases disease;
-  const detailDisease({Key? key, required this.disease}) : super(key: key);
-  bool isFavorite = false;
+  const DetailPage({Key? key, required this.disease}) : super(key: key);
+
+  get toggleFavorite => null;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(disease.plantName),
+        actions: <Widget>[
+          Icon(Icons.search),
+        ],
       ),
       body: ListView(
         children: [
-          Text(widget.subtitle),
-          // Tambahkan tombol favorit di sini
-          Container(
+        Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 2/5,
             child: ListView(
@@ -69,3 +72,4 @@ class detailDisease extends StatelessWidget {
     );
   }
 }
+
